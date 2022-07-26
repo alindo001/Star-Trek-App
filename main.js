@@ -3,7 +3,7 @@ document.querySelector('#getButton').addEventListener("click", apiRequest)
 async function apiRequest(){
 
     
-    const pokemonName = document.querySelector('input').value
+    const pokemonName = document.querySelector('input').value.toLowerCase()
     try{
         const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName} `)
         const data = await response.json()
